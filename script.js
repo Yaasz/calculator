@@ -26,3 +26,31 @@ const operate = (a, operator, b) => {
 			return "invalid operator";
 	}
 };
+let symbols = [
+	"C",
+	"+",
+	"-",
+	"*",
+	"/",
+	"%",
+	"^",
+
+	1,
+	2,
+	3,
+	4,
+	5,
+	6,
+	7,
+	8,
+	9,
+	0,
+	"=",
+];
+let buttonContainer = document.querySelector(".button-container");
+symbols.map((symbol) => {
+	let button = document.createElement("button");
+	button.innerText = symbol;
+	button.setAttribute("class", "button");
+	buttonContainer.appendChild(button);
+});
