@@ -1,2 +1,3 @@
 # calculator
-This a project in the foundation part of the odin project created using HTML. CSS and JavaScript.
+
+This project created as course project for the foundation part of The Odin Project Curriculum. The calculator is created using HTML, CSS and JavaScript.
