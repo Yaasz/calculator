@@ -71,7 +71,6 @@ let operator = null;
 input.addEventListener("change", (e) => {
 	if (isOperator(e.target.value.at(-1))) {
 		if (operandA == null) {
-			console.log("num", Number(e.target.value.slice(0, -1)));
 			if (Number(e.target.value.slice(0, -1)) == 0) {
 				operandA = 0;
 			} else {
