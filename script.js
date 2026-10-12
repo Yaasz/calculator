@@ -73,6 +73,7 @@ function isOperator(char) {
 let operandA = null;
 let operandB = null;
 let operator = null;
+let eqClicked = false;
 input.addEventListener("change", (e) => {
 	if (isOperator(e.target.value.at(-1))) {
 		if (operandA == null) {
@@ -95,6 +96,7 @@ input.addEventListener("change", (e) => {
 			}
 			operandB = null;
 			if (e.target.value.at(-1) == "=") {
+				eqClicked = true;
 				e.target.value = operandA;
 				operator = null;
 			} else {
@@ -111,6 +113,13 @@ buttonContainer.addEventListener("click", (e) => {
 			operandA = null;
 			operator = null;
 			return;
+		}
+		if (eqClicked) {
+			input.value = 0;
+			operandA = null;
+			operandB = null;
+			operator = null;
+			eqClicked = false;
 		}
 		if (input.value == 0) {
 			input.value = e.target.innerText;
