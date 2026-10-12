@@ -2,7 +2,12 @@
 const add = (a, b) => a + b;
 const sub = (a, b) => a - b;
 const multiply = (a, b) => a * b;
-const div = (a, b) => a / b;
+const div = (a, b) => {
+	if (b == 0) {
+		return "error division by zero";
+	}
+	return (a / b).toFixed(2);
+};
 const pow = (a, b) => a ** b;
 const rem = (a, b) => a % b;
 
