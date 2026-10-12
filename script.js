@@ -71,7 +71,12 @@ let operator = null;
 input.addEventListener("change", (e) => {
 	if (isOperator(e.target.value.at(-1))) {
 		if (operandA == null) {
-			operandA = e.target.value.slice(0, -1);
+			console.log("num", Number(e.target.value.slice(0, -1)));
+			if (Number(e.target.value.slice(0, -1)) == 0) {
+				operandA = 0;
+			} else {
+				operandA = e.target.value.slice(0, -1);
+			}
 			operator = e.target.value.at(-1);
 			return;
 		} else {
@@ -84,7 +89,6 @@ input.addEventListener("change", (e) => {
 			if (operandB != "") {
 				operandA = operate(operandA, operator, operandB);
 			}
-
 			operandB = null;
 			if (e.target.value.at(-1) == "=") {
 				e.target.value = operandA;
