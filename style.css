@@ -1,6 +1,8 @@
 body {
 	background-color: gainsboro;
 	height: 100vh;
+	display: flex;
+	align-items: center;
 }
 
 .container {
@@ -8,8 +10,8 @@ body {
 	background-color: rgb(11, 9, 9);
 	display: flex;
 	flex-direction: column;
-	width: 40%;
-	min-height: 60%;
+	height: fit-content;
+
 	margin-inline: auto;
 	margin-block: auto;
 	border-radius: 8px;
@@ -30,5 +32,13 @@ body {
 input {
 	margin-bottom: 8px;
 	padding-block: 12px;
-	height: 20%;
+	height: 30%;
+}
+@media only screen and (min-width: 992px) {
+	.container {
+		min-height: 80vh;
+	}
+	input {
+		height: 80px;
+	}
 }
