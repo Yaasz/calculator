@@ -9,7 +9,7 @@ body {
 	display: flex;
 	flex-direction: column;
 	width: 40%;
-	height: 60%;
+	min-height: 60%;
 	margin-inline: auto;
 	margin-block: auto;
 	border-radius: 8px;
